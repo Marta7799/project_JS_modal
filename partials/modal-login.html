@@ -1,53 +1,90 @@
-<div class="backdrop is-hidden" login-modal>
-  <div class="modal modal-login">
+<div class="registration-backdrop is-hidden" registration-data-modal>
+  <div class="registration-modal">
     <button
+      class="registration-close-btn"
       type="button"
-      class="modal-login__close modal-login__btn"
-      login-close
+      registration-data-modal-close
     >
-      <svg class="modal-login__icon" width="18px" height="18px">
-        <use href=""></use>
+      <svg class="registration-close-icon" width="28" height="28">
+        <use href="./images/icons.svg#icon-x-close"></use>
       </svg>
     </button>
-    <div class="login-wrapper">
-      <form class="form" autocomplete="off">
-        <label>
+
+    <form clas="registration-modal-form">
+      <div class="registration-modal-field">
+        <label></label>
+        <input
+          type="text"
+          id="user-name"
+          class="registration-modal-input"
+          name="userName"
+          placeholder="Name"
+        />
+      </div>
+
+      <div class="registration-modal-field">
+        <label></label>
+        <div class="registration-modal-field-wrapper">
           <input
-            class="input login-form name"
-            type="name"
-            name="name"
-            required
-            placeholder="name"
+            type="text"
+            id="user-email"
+            class="registration-modal-input"
+            placeholder="Email"
+            name="userEmail"
           />
-        </label>
-        <label>
-          <input
-            class="input login-form email"
-            type="email"
-            name="email"
-            required
-            placeholder="email"
-          />
-        </label>
-        <label>
-          <input
-            class="input login-form password"
-            type="password"
-            name="password"
-            required
-            placeholder="password"
-          />
-        </label>
-        <button class="modal-login__button" type="submit">sign up</button>
-        <div class="sign-up--btn-div">
-          <button class="sign-up form__btn" type="submit">Sign up</button>
-          <button class="sign-in form__btn" type="submit">Sign in</button>
+          <svg class="registration-modal-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-mail"></use>
+          </svg>
         </div>
-      </form>
+      </div>
+
+      <div class="registration-modal-field">
+        <label></label>
+        <div class="registration-modal-field-wrapper">
+          <input
+            type="password"
+            id="user-password"
+            class="registration-modal-input"
+            name="userPassword"
+            placeholder="Password"
+          />
+          <svg class="registration-modal-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-lock"></use>
+          </svg>
+        </div>
+      </div>
+      <button class="signin-btn" type="submit">Sign in</button>
+    </form>
+
+    <div class="registration-sending">
+      <button class="sign-link sign-up-link" type="button">Sign up</button>
+      <button class="sign-link sign-in-link" type="button">Sign in</button>
     </div>
   </div>
 </div>
 
-<!-- <svg class="modal-login__icon" width="10px" height="10px">
-            <use href=""></use>
-          </svg> -->
+<!-- button otwierający modal, wylogowywujący i po zalogowaniu-->
+
+<!-- <div class="sign-up-block">
+  <button type="button" class="sign-up-btn" registration-data-modal-open>
+    <span class="sign-up-btn-text">Sign up</span>
+    <svg class="right-arrow-icon" width="23" height="26">
+      <use href="./images/icons.svg#icon-arrow-narrow-right"></use>
+    </svg>
+  </button>
+
+  <button type="button" class="user-btn visually-hidden">
+    <img class="user-btn__img" src="/src/images/user-afterLogin.png" alt="icn" />
+    <span class="userName">Stephen</span>
+    <svg class="down-arrow-icon" width="23" height="36">
+      <use href="./images/icons.svg#icon-user-caret-down"></use>
+    </svg>
+  </button>
+
+  <button type="button" class="log-out-btn visually-hidden">
+    <span>Log out</span>
+    <svg class="right-arrow-icon" width="20" height="20">
+      <use href="./images/icons.svg#icon-arrow-narrow-right"></use>
+    </svg>
+  </button>
+</div> -->
